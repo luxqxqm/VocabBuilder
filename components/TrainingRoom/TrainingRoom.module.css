@@ -1,0 +1,250 @@
+.status {
+  margin: 40px 0;
+  color: var(--color-black-50);
+  font-size: 16px;
+}
+
+.exercise {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 302px;
+  padding: 18px;
+  border-radius: 15px;
+  background-color: var(--color-white);
+}
+
+.answerPanel,
+.wordPanel {
+  position: relative;
+  min-width: 0;
+  padding: 22px 20px;
+  background-color: var(--color-off-white);
+}
+
+.answerPanel {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e8e8e8;
+}
+
+.panelHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.language {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.language svg {
+  flex-shrink: 0;
+}
+
+.sourceWord {
+  overflow-wrap: break-word;
+}
+
+.answerInput {
+  width: 100%;
+  flex: 1;
+  min-height: 140px;
+  margin-top: 20px;
+  padding: 0;
+  resize: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--color-black);
+  font: inherit;
+  font-size: 16px;
+}
+
+.answerInput::placeholder {
+  color: var(--color-black-50);
+}
+
+.answerInput:focus-visible {
+  outline: none;
+}
+
+.nextButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--color-black-50);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nextButton span {
+  color: var(--color-green);
+  font-size: 20px;
+}
+
+.nextButton:hover:not(:disabled) {
+  color: var(--color-black);
+}
+
+.nextButton:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 4px;
+}
+
+.nextButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 30px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    opacity 200ms ease;
+}
+
+.primaryButton {
+  border: 1px solid var(--color-green);
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.primaryButton:hover:not(:disabled) {
+  background-color: var(--color-green-light);
+  border-color: var(--color-green-light);
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-green);
+  background-color: transparent;
+  color: var(--color-green);
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 3px;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .exercise {
+    grid-template-columns: 1fr;
+  }
+
+  .answerPanel {
+    min-height: 220px;
+    border-right: none;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .wordPanel {
+    min-height: 180px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .exercise {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .answerPanel,
+  .wordPanel {
+    padding: 20px 16px;
+  }
+
+  .answerPanel {
+    min-height: 220px;
+    border-right: none;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .wordPanel {
+    min-height: 180px;
+  }
+
+  .panelHeading {
+    font-size: 14px;
+  }
+
+  .language {
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  .answerInput {
+    min-height: 90px;
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .secondaryButton {
+    border: none;
+  }
+
+  .secondaryButton:hover:not(:disabled) {
+    background-color: transparent;
+    color: var(--color-green);
+  }
+}
+
+.progress {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}

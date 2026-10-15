@@ -1,0 +1,61 @@
+.title {
+  margin-bottom: 28px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.columnTitle {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.wordList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wordList li {
+  overflow-wrap: anywhere;
+  font-size: 16px;
+}
+
+.illustration {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    margin-bottom: 24px;
+    font-size: 26px;
+  }
+
+  .columns {
+    gap: 16px;
+  }
+
+  .columnTitle {
+    font-size: 12px;
+  }
+
+  .wordList li {
+    font-size: 14px;
+  }
+
+  .illustration img {
+    width: 120px;
+    height: auto;
+  }
+}

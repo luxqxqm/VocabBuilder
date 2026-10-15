@@ -1,0 +1,53 @@
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: min(calc(100% - 32px), var(--modal-width));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  overflow-y: auto;
+}
+
+.dialog::backdrop {
+  background-color: rgba(18, 20, 23, 0.45);
+}
+
+.content {
+  position: relative;
+  padding: 44px 46px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-white);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .dialog {
+    width: min(calc(100% - 32px), 343px);
+    border-radius: 15px;
+  }
+
+  .content {
+    padding: 48px 12px 32px;
+  }
+
+  .closeButton {
+    top: 16px;
+    right: 16px;
+  }
+}

@@ -1,0 +1,102 @@
+@import "modern-normalize";
+
+:root {
+  --color-black: #121417;
+  --color-white: #ffffff;
+  --color-green: #85aa9f;
+  --color-background: #f8f8f8;
+  --color-off-white: #fcfcfc;
+  --color-green-light: #a5c0b8;
+  --color-black-50: #12141780;
+  --color-purple: #9747ff;
+  --color-red: #d80027;
+  --color-success: #3cbf61;
+  --color-pure-black: #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+
+  font-family: var(--font-fixel-display), sans-serif;
+  color: var(--color-black);
+
+  background-color: var(--color-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+@media screen and (max-width: 1439px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+}
