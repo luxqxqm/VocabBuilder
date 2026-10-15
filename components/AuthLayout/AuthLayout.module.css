@@ -99,7 +99,7 @@
 
   .illustrationContainer {
     display: flex;
-    order: -1;
+    order: -2;
     width: 100%;
     margin: 24px 0 0;
   }
@@ -113,6 +113,7 @@
   }
 
   .caption {
-    display: none;
+    order: -1;
+    margin: 16px 0 24px;
   }
 }
